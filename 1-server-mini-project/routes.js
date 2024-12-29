@@ -1,8 +1,6 @@
-const http = require('node:http');
 const fs = require('fs');
 
-// the inside function runs on every incoming request -> event driven architecture of NodeJS
-const server = http.createServer((req, res) => {
+function requestHandler(req, res) {
   const url = req.url;
   const method = req.method;
 
@@ -45,6 +43,11 @@ const server = http.createServer((req, res) => {
   res.write('<body><h1>Hello from my Node.js Server!</h1></body>');
   res.write('</html>');
   res.end();
-});
+}
 
-server.listen('3000');
+// aliter
+// module.exports = {
+//   requestHandler,
+// };
+
+module.exports = requestHandler; // if there is only one function to export
