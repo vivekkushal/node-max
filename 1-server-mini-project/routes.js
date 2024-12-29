@@ -45,9 +45,18 @@ function requestHandler(req, res) {
   res.end();
 }
 
-// aliter
-// module.exports = {
-//   requestHandler,
-// };
+module.exports = {
+  handler: requestHandler,
+  someText: 'Some hard coded text',
+};
 
-module.exports = requestHandler; // if there is only one function to export
+// aliter
+// module.exports.handler = requestHandler;
+// module.exports.someText = 'Some hard coded text';
+
+// aliter - shortcut supported by NodeJS, not a JavaScript feature
+// exports.handler = requestHandler;
+// exports.someText = 'Some hard coded text';
+
+// aliter
+// module.exports = requestHandler; // if there is only one function to export
