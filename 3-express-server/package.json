@@ -1,0 +1,23 @@
+{
+  "name": "2-npm-workflow-debugging",
+  "version": "1.0.0",
+  "description": "This is a project where I code along the 'Improved Development Workflow and Debugging' section of Max's NodeJS course.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "Nodejs",
+    "NodeJS",
+    "npm"
+  ],
+  "author": "Vivek Kushal",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
