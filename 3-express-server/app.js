@@ -1,12 +1,10 @@
-const http = require('node:http');
-
 const express = require('express');
 
 const app = express();
 
 app.use((req, res, next) => {
   console.log('In the middleware!');
-  next();
+  next(); // Allows the request to continue to the next middleware in line
 });
 
 app.use((req, res, next) => {
@@ -14,7 +12,4 @@ app.use((req, res, next) => {
   res.send('<h1>Hello from Express!</h1>');
 });
 
-// the inside function runs on every incoming request -> event driven architecture of NodeJS
-const server = http.createServer(app);
-
-server.listen(3000);
+app.listen(3000);
