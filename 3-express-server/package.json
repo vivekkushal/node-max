@@ -1,5 +1,5 @@
 {
-  "name": "2-npm-workflow-debugging",
+  "name": "3-express-server",
   "version": "1.0.0",
   "description": "This is a project where I code along the 'Improved Development Workflow and Debugging' section of Max's NodeJS course.",
   "main": "app.js",
