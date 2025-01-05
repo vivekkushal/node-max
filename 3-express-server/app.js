@@ -10,6 +10,7 @@ const shopRoutes = require('./routes/shop');
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(rootDir, 'public')));
 
 // app.use('/', (req, res, next) => {
 //   console.log('This always runs!');
