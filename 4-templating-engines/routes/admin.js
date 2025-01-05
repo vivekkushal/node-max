@@ -19,5 +19,8 @@ router.post('/add-product', (req, res, next) => {
   res.redirect('/');
 });
 
+// module.exports = router;
+
+// NodeJS shortcut, not a JavaScript feature
 exports.routes = router;
 exports.products = products;
